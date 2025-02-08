@@ -116,7 +116,7 @@ int handleInput(void)
 		resetPia6820();
 		resetM6502();
 		return 1;
-	} else if (tmp == 'X') {
+	} else if (tmp == 'N') {
  		resetScreen();
 		resetPia6820();
 		resetMemory();

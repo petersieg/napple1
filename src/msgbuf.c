@@ -38,7 +38,7 @@ void print_msgbuf(char *s)
 
 	if ((int)strlen(s) < 1)
 		sprintf(msg, 
-			"Basic Dump Load Reset Xard Quit Mode %2dK",
+			"Basic Dump Load Reset New Quit Mode %2dK",
 			memMode());
 	else
 		sprintf(msg, 
