@@ -69,6 +69,30 @@ int handleInput(void)
 	tmp = '\0';
 	while ( (tmp = getch_screen()) == '\0' )
 		;
+	if (tmp=='E') {
+		if (startAutotyping("AUTOTYPING_E.TXT"))
+			return 1;
+	}
+	if (tmp=='F') {
+		if (startAutotyping("AUTOTYPING_F.TXT"))
+			return 1;
+	}
+	if (tmp=='G') {
+		if (startAutotyping("AUTOTYPING_G.TXT"))
+			return 1;
+	}
+	if (tmp=='H') {
+		if (startAutotyping("AUTOTYPING_H.TXT"))
+			return 1;
+	}
+	if (tmp=='I') {
+		if (startAutotyping("AUTOTYPING_I.TXT"))
+			return 1;
+	}
+	if (tmp=='J') {
+		if (startAutotyping("AUTOTYPING_J.TXT"))
+			return 1;
+	}
 	if (tmp=='K') {
 		if (startAutotyping("AUTOTYPING.TXT"))
 			return 1;
@@ -92,7 +116,7 @@ int handleInput(void)
 		resetPia6820();
 		resetM6502();
 		return 1;
-	} else if (tmp == 'H') {
+	} else if (tmp == 'X') {
  		resetScreen();
 		resetPia6820();
 		resetMemory();
