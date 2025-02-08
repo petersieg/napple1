@@ -1,3 +1,15 @@
+Feb.2025: P.Sieg: Quick hack to allow for more AUTOTYPING_X.TXT
+Shift-H = Hard Reset changed to Shift-X (Xard)
+Shift-K = Type: AUTOTYPING.TXT (as before)
+Shift-E = Type: AUTOTYPING_E.TXT (new)
+Shift-F = Type: AUTOTYPING_F.TXT (new)
+Shift-G = Type: AUTOTYPING_G.TXT (new)
+Shift-H = Type: AUTOTYPING_H.TXT (new)
+Shift-I = Type: AUTOTYPING_I.TXT (new)
+Shift-J = Type: AUTOTYPING_J.TXT (new)
+
+
+
 napple1 is an Apple 1 emulator using ncurses, ported from the SDL version 
 Pom1 emulafor. If you have some questions, please report it as an issue. 
 
