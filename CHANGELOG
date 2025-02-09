@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+Feb.2025: P.Sieg: Shift-K also asks for a filename to start autotyping. Files are located in subdir "type".
+Shift-H = Hard Reset changed to Shift-N (New)
+
 2.4.0 mtleblanc's contribution:
 - Indirect X zero page addressing should always wrap and stay on zero page
 - BRK should disable interrupts
