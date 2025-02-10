@@ -256,6 +256,47 @@ int loadCore(void)
 	return 1;
 }
 
+int loadProg(void)
+{
+	FILE *fd;
+	char input[MSG_LEN_MAX +1];
+	char progname[5 + MSG_LEN_MAX +1]; /* 'prog/' + input string */
+	size_t s = 0;
+	int address = 0x280;
+	unsigned char buf[65536];
+	int i;
+
+	gets_msgbuf("Load prog. Filename: ", input);
+	sprintf(progname, "prog/%s", input);
+
+	gets_msgbuf("Load prog. Address: ", input);
+	/* address = atoi(input); decimal */
+	address = strtol(input,NULL,16); /* hexadecimal */
+
+	fd = fopen(progname, "r");
+	if (fd) {
+		s = fread(&buf[0], 1, MEMMAX+1, fd);
+		fclose(fd);
+	}
+	if (s) { 
+		gets_msgbuf("Load prog completed: ", input);
+	} else {
+		gets_msgbuf("Failed to open prog file: ", input);
+		return 0;
+	}
+
+	/* 0xF000 is unused area of 8K mode or
+	 * ROM area of 32K mode. So,  if 0xF000 has a value,
+	 * The mode should better change to 32K mode.
+	 */
+	if ((buf[0xF000] != 0) && (memMode() == 8)) {
+		flipMode();
+	}
+
+	for (i = 0;      i <= s; i++) mem[address+i] = buf[i];
+	return 1;
+}
+
 /* set ROM file name using ROMDIR env variable
  * default path is ./rom 
  * need to be called before loadBasic() and loadMonitor()

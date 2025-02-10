@@ -84,6 +84,9 @@ int handleInput(void)
 		resetPia6820();
 		resetM6502();
 		return 1;
+	} else if (tmp == 'P') {
+		loadProg();
+		return 1;
 	} else if (tmp == 'L') {
 		loadCore();
 		resetPia6820();

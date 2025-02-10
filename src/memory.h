@@ -25,6 +25,7 @@ unsigned char memRead(unsigned short address);
 void memWrite(unsigned short address, unsigned char value);
 void dumpCore(void);
 int loadCore(void);
+int loadProg(void);
 int memMode(void);
 void flipMode(void);
 void setRomFiles(void);
