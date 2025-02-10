@@ -1,7 +1,9 @@
 CHANGELOG
 =========
 
-Feb.2025: P.Sieg: Shift-K also asks for a filename to start autotyping. Files are located in subdir "type".
+Feb.2025: P.Sieg: 
+Shift-K also asks for a filename to start autotyping. Files are located in subdir "type".
+Shift-P loads a binary program file. HEX load address is asked after filename (hidden functionality). Files are located in subdir "prog".
 Shift-H = Hard Reset changed to Shift-N (New)
 
 2.4.0 mtleblanc's contribution:
