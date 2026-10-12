@@ -73,6 +73,8 @@ Command      Key        Description
 Basic load   Shift + B  Load rom/basic.rom to ram
 Dump core    Shift + D  Dump memory to core/_file name_ 
 Load core    Shift + L  Load memory from core/_file name_ 
+Load prog    Shift + P  Load prog from prog/_file name_ 
+Load prog    Shift + K  Load type from type/_file name_ 
 Reset        Shift + R  Reset the emulator
 Hard reset   Shidt + H  Reset & Clear memory
 Quit         Shidt + Q  Quit the emulator
